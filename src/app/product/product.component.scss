@@ -1,0 +1,11 @@
+#fav {
+    height: 70px;
+    margin-left: 50%;
+}
+
+@media (min-width: 300px)and(max-width: 768px) {
+    #fav {
+        height: 50px;
+        margin-left: 40%;
+    }
+}

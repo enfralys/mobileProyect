@@ -5,6 +5,7 @@ import { ARComponent } from './ar/ar.component';
 import { ProductComponent } from './product/product.component';
 import { CertificadosComponent } from './certificados/certificados.component';
 import { HomeComponent } from './home/home.component';
+import { FavoritosComponent } from './favoritos/favoritos.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,9 @@ const routes: Routes = [
   },
   {
     path: 'home', component: HomeComponent
+  },
+  {
+    path: 'favoritos', component: FavoritosComponent
   }
 
 ];
