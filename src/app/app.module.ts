@@ -11,6 +11,9 @@ import { ProductComponent } from './product/product.component';
 import { CertificadosComponent } from './certificados/certificados.component';
 import { HomeComponent } from './home/home.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
+import { viewPDFComponent } from './favoritos/viewpdf/viewpdf.components';
+import { fichaTecnicaComponent } from './favoritos/ficha_tecnica/fichaTecnica.component';
+import { viewVideoComponent } from './favoritos/viewVideo/viewVideo.compoent';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { FavoritosComponent } from './favoritos/favoritos.component';
     ProductComponent,
     CertificadosComponent,
     HomeComponent,
-    FavoritosComponent
+    FavoritosComponent,
+    viewPDFComponent,
+    fichaTecnicaComponent,
+    viewVideoComponent
   ],
   imports: [
     BrowserModule,

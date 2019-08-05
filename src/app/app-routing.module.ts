@@ -6,6 +6,9 @@ import { ProductComponent } from './product/product.component';
 import { CertificadosComponent } from './certificados/certificados.component';
 import { HomeComponent } from './home/home.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
+import { viewPDFComponent } from './favoritos/viewpdf/viewpdf.components';
+import { fichaTecnicaComponent } from './favoritos/ficha_tecnica/fichaTecnica.component';
+import { viewVideoComponent } from './favoritos/viewVideo/viewVideo.compoent';
 
 
 const routes: Routes = [
@@ -29,7 +32,15 @@ const routes: Routes = [
   },
   {
     path: 'favoritos', component: FavoritosComponent
-  }
+  },{
+    path: 'viewpdf', component: viewPDFComponent
+  },
+  {
+    path: 'fichaTecnica', component: fichaTecnicaComponent
+  },
+  {
+    path: 'viewVideo', component: viewVideoComponent
+  },
 
 ];
 
