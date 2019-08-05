@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HAMMER_LOADER } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-viewVideo',
@@ -7,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class viewVideoComponent implements OnInit {
+    title = "El titulo";
     constructor (){
 
     }
 
     ngOnInit(){
-        
+
     }
 }
