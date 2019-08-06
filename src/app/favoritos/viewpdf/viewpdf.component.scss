@@ -197,3 +197,13 @@ p {
     margin-top: 10%;
     color: white;
 }
+
+@media (min-width: 1024px)and(max-width: 1400px) {
+    .contenedor {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        margin-top: 5%;
+        margin: 5% 0% 0% 10%;
+    }
+}
