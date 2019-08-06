@@ -12,10 +12,5 @@ export class FavoritosComponent implements OnInit {
   ngOnInit() {
   }
   
-  prueba(){
-    const ds3 = 2
-    const result = ds3 + ds3
-      alert('LA DS3=  '+result)
-  }
-
+  
 }
