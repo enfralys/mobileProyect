@@ -9,3 +9,21 @@
     height: 100%;
     width: 100%;
 }
+
+
+/* Ipad PRO  */
+
+@media (min-width: 1024px)and(max-width: 1025px) {
+    #logos {
+        display: block;
+        text-align: center;
+        height: 60%;
+    }
+    .container {
+        max-width: 900px;
+    }
+    .full {
+        height: 100%;
+        width: 100%;
+    }
+}
