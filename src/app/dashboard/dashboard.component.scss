@@ -2,3 +2,24 @@
     color: white;
     width: 20px;
 }
+
+
+/* iPad  */
+
+@media (min-width: 768px)and(max-width: 1023px) {
+    .atras {
+        margin-left: 60%;
+    }
+}
+
+
+/* iPad PRO */
+
+@media (min-width: 1024px)and(max-width: 1400px) {
+    .atras {
+        margin-left: 55%;
+    }
+    img {
+        width: 150px
+    }
+}
