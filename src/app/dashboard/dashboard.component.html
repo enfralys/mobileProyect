@@ -1,26 +1,45 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand logo" href="#" routerLink="/home">
-        <img src="../../assets/logos/logo.png" width="100%" height="30" class="d-inline-block align-top " alt="">
-    </a>
-    <img class="atras" (click)="back()" src="../../../../assets/logos/atras.png">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav" st>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="openNav()">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        <img style="width: 40%;    margin-left: 16%;" src="assets/logos/logo.png" routerLink="/home">
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#" routerLink="/home">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" routerLink="/ar">AR</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" routerLink="/product">Productos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" routerLink="/certificado">Certificados</a>
-            </li>
-        </ul>
+
+
+    </nav>
+</div>
+<!-- Sidebar Navigation-->
+<div id="slide-out" class="side-nav fixed">
+    <div id="mySidenav" class="sidenav">
+        <div style="width: 70% ;background-color: #EDEDED;">
+            <div class="side">
+                <img src="assets/logos/logo.png" routerLink="/home" style="width: 60%; margin-top: 20px;margin-bottom: 20px">
+            </div>
+            <hr>
+            <div class="side-item" routerLink="/home">
+                <img class="ico" src="assets/logos/home.png">
+                <p>Inicio</p>
+            </div>
+            <hr>
+            <div class="side-item" routerLink="/ar">
+                <img class="ico" src="assets/logos/ar.png">
+                <p>AR</p>
+            </div>
+            <div class="side-item" routerLink="/product">
+                <img class="ico" src="assets/logos/productos.png">
+                <p>Productos</p>
+            </div>
+            <div class="side-item" routerLink="/certificado">
+                <img class="ico" src="assets/logos/certificados.png">
+                <p>Certificados</p>
+            </div>
+        </div>
+        <div (click)="closeNav()" style="   
+                width: 30%;
+                height: 100%;
+                background-color: black;
+                opacity: 0.6;">
+        </div>
     </div>
-</nav>
+</div>

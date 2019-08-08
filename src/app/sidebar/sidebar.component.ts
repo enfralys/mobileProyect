@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common'
+import {Location} from '@angular/common'
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class SidebarComponent implements OnInit {
 
-  constructor(private _location: Location) { }
+  constructor(private _location : Location) { }
 
   ngOnInit() {
   }

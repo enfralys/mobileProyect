@@ -1,25 +1,178 @@
-.atras {
+/* .atras {
     color: white;
     width: 20px;
-}
+} */
 
 
 /* iPad  */
 
-@media (min-width: 768px)and(max-width: 1023px) {
+
+/* @media (min-width: 768px)and(max-width: 1023px) {
     .atras {
         margin-left: 60%;
     }
-}
+} */
 
 
 /* iPad PRO */
 
-@media (min-width: 1024px)and(max-width: 1400px) {
+
+/* @media (min-width: 1024px)and(max-width: 1400px) {
     .atras {
         margin-left: 55%;
     }
     img {
         width: 150px
     }
+} */
+
+
+/* The side navigation menu */
+
+.carousel-indicators li {
+    text-indent: unset;
+}
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 16;
+    /* Stay on top */
+    top: 0;
+    display: flex;
+    /* Stay at the top */
+    left: 0;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    /*padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    margin-left: 3%;
+    font-weight: 700;
+    font-size: 25px;
+    /* height: 100vh; */
+    /* right: 0px; */
+    color: #2D3942;
+    margin-top: 4%;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 400px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.side {
+    display: flex;
+    align-items: center;
+    /* align-content: center; */
+    justify-content: center;
+    width: 100%;
+}
+
+.ico {
+    width: 18%;
+    margin-left: 3%;
+}
+
+hr {
+    margin: 0px
+}
+
+.side-item {
+    display: flex;
+    /* margin-bottom: 2%; */
+    /* margin-top: 2%; */
+    width: 100%;
+    color: #2D3942;
+    /* align-content: space-around; */
+    justify-content: stretch;
+    align-items: center;
+}
+
+.side-item:active {
+    display: flex;
+    /* margin-bottom: 2%; */
+    /* margin-top: 2%; */
+    width: 100%;
+    color: white;
+    background-color: #2D3942;
+    /* align-content: space-around; */
+    justify-content: stretch;
+    align-items: center;
+}
+
+p {
+    margin-left: 3%;
+    font-weight: 700;
+    font-size: 25px;
+    /* height: 100vh; */
+    /* right: 0px; */
+    margin-top: 4%;
+}
+
+a {
+    margin-left: 3%;
+    font-weight: 700;
+    font-size: 25px;
+    /* height: 100vh; */
+    /* right: 0px; */
+    margin-top: 4%;
+}
+
+.navbar {
+    justify-content: unset;
+    background-color: #EDEDED!important;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("../../assets/logos/menu.png")
+}
+
+.full {
+    height: 100%;
+    width: 100%;
 }

@@ -9,6 +9,7 @@ import { FavoritosComponent } from './favoritos/favoritos.component';
 import { viewPDFComponent } from './favoritos/viewpdf/viewpdf.components';
 import { fichaTecnicaComponent } from './favoritos/ficha_tecnica/fichaTecnica.component';
 import { viewVideoComponent } from './favoritos/viewVideo/viewVideo.compoent';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,9 @@ const routes: Routes = [
   {
     path: 'viewVideo', component: viewVideoComponent
   },
+  {
+    path: 'sidebar', component: SidebarComponent
+  }
 
 ];
 

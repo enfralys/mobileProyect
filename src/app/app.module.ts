@@ -14,6 +14,7 @@ import { FavoritosComponent } from './favoritos/favoritos.component';
 import { viewPDFComponent } from './favoritos/viewpdf/viewpdf.components';
 import { fichaTecnicaComponent } from './favoritos/ficha_tecnica/fichaTecnica.component';
 import { viewVideoComponent } from './favoritos/viewVideo/viewVideo.compoent';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { viewVideoComponent } from './favoritos/viewVideo/viewVideo.compoent';
     FavoritosComponent,
     viewPDFComponent,
     fichaTecnicaComponent,
-    viewVideoComponent
+    viewVideoComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
