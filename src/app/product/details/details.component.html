@@ -2,12 +2,20 @@
     <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav" st>
             <img (click)="back()" src="assets/logos/atras.png">
-
             <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="openNav()">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+          <span class="navbar-toggler-icon"></span>
+        </button>
         </nav>
     </div>
+
+    <div class="product-child">
+        <div class="items-products" *ngFor="let subcategory of subcategories">
+            <div class="side-itemr">
+                <p class="side-item-name">{{ subcategory.name }}</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Sidebar Navigation-->
     <div id="slide-out" class="side-nav fixed">
         <div id="mySidenav" class="sidenav">
@@ -25,7 +33,7 @@
                     <img class="ico" src="assets/logos/ar.png">
                     <p>AR</p>
                 </div>
-                <div class="side-item" routerLink="/product-list">
+                <div class="side-item" routerLink="/product">
                     <img class="ico" src="assets/logos/productos.png">
                     <p>Productos</p>
                 </div>
@@ -35,10 +43,12 @@
                 </div>
             </div>
             <div (click)="closeNav()" style="
-                    width: 30%;
-                    height: 100%;
-                    background-color: black;
-                    opacity: 0.6;">
+                  width: 30%;
+                  height: 100%;
+                  background-color: black;
+                  opacity: 0.6;">
             </div>
         </div>
     </div>
+    <!-- Sidebar navigation -->
+</div>

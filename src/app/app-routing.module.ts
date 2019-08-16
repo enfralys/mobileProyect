@@ -10,20 +10,24 @@ import { viewPDFComponent } from './favoritos/viewpdf/viewpdf.components';
 import { fichaTecnicaComponent } from './favoritos/ficha_tecnica/fichaTecnica.component';
 import { viewVideoComponent } from './favoritos/viewVideo/viewVideo.compoent';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { DetailsComponent } from './product/details/details.component';
 
 
 const routes: Routes = [
-   { 
-    path: '', redirectTo: '/home', pathMatch: 'full' 
+   {
+    path: '', redirectTo: '/home', pathMatch: 'full'
   },
-  { 
-  path: 'dashboard', component: DashboardComponent, 
+  {
+  path: 'dashboard', component: DashboardComponent,
   },
   {
     path: 'ar', component: ARComponent
   },
   {
-    path: 'product', component: ProductComponent
+    path: 'product-list', component: ProductComponent
+  },
+  {
+    path: 'product-list/details/:id', component: DetailsComponent
   },
   {
     path: 'certificado', component: CertificadosComponent

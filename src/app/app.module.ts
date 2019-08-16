@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { viewPDFComponent } from './favoritos/viewpdf/viewpdf.components';
 import { fichaTecnicaComponent } from './favoritos/ficha_tecnica/fichaTecnica.component';
 import { viewVideoComponent } from './favoritos/viewVideo/viewVideo.compoent';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { DetailsComponent } from './product/details/details.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,14 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     viewPDFComponent,
     fichaTecnicaComponent,
     viewVideoComponent,
-    SidebarComponent
+    SidebarComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

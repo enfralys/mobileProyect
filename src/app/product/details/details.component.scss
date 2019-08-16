@@ -107,10 +107,6 @@ hr {
     background-color: #EDEDED;
 }
 
-.side-itemp p {
-    text-transform: uppercase;
-}
-
 .side-itemr {
     display: flex;
     /* margin-bottom: 2%; */
@@ -135,6 +131,7 @@ hr {
     /* height: 100vh; */
     /* right: 0px; */
     margin-top: unset;
+    text-transform: uppercase;
 }
 
 .side-item:active {
@@ -163,7 +160,7 @@ p {
 }
 
 .navbar-light .navbar-toggler-icon {
-    background-image: url("../../assets/logos/menu.png")
+    background-image: url("../../../assets/logos/menu.png")
 }
 
 .productos {
