@@ -24,6 +24,7 @@ import { DetailsComponent } from './product/details/details.component';
     DashboardComponent,
     ARComponent,
     ProductComponent,
+    DetailsComponent,
     CertificadosComponent,
     HomeComponent,
     FavoritosComponent,
@@ -31,7 +32,6 @@ import { DetailsComponent } from './product/details/details.component';
     fichaTecnicaComponent,
     viewVideoComponent,
     SidebarComponent,
-    DetailsComponent
   ],
   imports: [
     BrowserModule,

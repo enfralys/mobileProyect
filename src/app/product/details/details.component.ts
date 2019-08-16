@@ -38,4 +38,16 @@ export class DetailsComponent implements OnInit {
     this._location.back()
     console.log('BACK')
   }
+
+  openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("nav").style.display = "none";
+
+  }
+
+  closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    // document.body.style.backgroundColor = "white";
+    document.getElementById("nav").style.display = "";
+  }
 }
