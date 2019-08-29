@@ -16,6 +16,8 @@ import { DetailsComponent } from './product/details/details.component';
 import { ItemDetailsComponent } from './product/details/item/item-details/item-details.component';
 import { ItemComponent } from './product/details/item/item.component';
 import { TechnicalDataComponent } from './product/details/item/item-details/technical-data/technical-data.component';
+import { InsQxComponent } from './product/details/item/item-details/ins-qx/ins-qx.component';
+import { PdfComponent } from './product/details/item/item-details/technical-data/pdf/pdf.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,11 @@ import { TechnicalDataComponent } from './product/details/item/item-details/tech
     CertificadosComponent,
     HomeComponent,
     SidebarComponent,
+    InsQxComponent,
     ItemDetailsComponent,
     ItemComponent,
     TechnicalDataComponent,
+    PdfComponent,
   ],
   imports: [
     BrowserModule,

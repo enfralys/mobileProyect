@@ -28,4 +28,14 @@ export class ItemService {
     let params = json;
     return this.http.get(`${this.server}/productbyid`, {params})
   }
+
+  getproductitems(Id)
+  {
+    let json = {
+      id: Id,
+      client_id: '3'
+    }
+    let params = json;
+    return this.http.get(`${this.server}/productitems`, {params})
+  }
 }

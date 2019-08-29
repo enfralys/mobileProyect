@@ -16,7 +16,6 @@ export class ItemDetailsComponent implements OnInit {
   constructor(
     private router: ActivatedRoute,
     private navigate: Router,
-    private _location: Location,
     private service: ItemService)
   {
     this.loadData();
@@ -31,11 +30,6 @@ export class ItemDetailsComponent implements OnInit {
       let source: any = data;
       this.item = source.data;
     });
-  }
-
-  back() {
-    this._location.back()
-    console.log('BACK')
   }
 
 }
