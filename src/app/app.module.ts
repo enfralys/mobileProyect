@@ -11,12 +11,10 @@ import { ARComponent } from './ar/ar.component';
 import { ProductComponent } from './product/product.component';
 import { CertificadosComponent } from './certificados/certificados.component';
 import { HomeComponent } from './home/home.component';
-import { FavoritosComponent } from './favoritos/favoritos.component';
-import { viewPDFComponent } from './favoritos/viewpdf/viewpdf.components';
-import { fichaTecnicaComponent } from './favoritos/ficha_tecnica/fichaTecnica.component';
-import { viewVideoComponent } from './favoritos/viewVideo/viewVideo.compoent';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DetailsComponent } from './product/details/details.component';
+import { ItemDetailsComponent } from './product/details/item/item-details/item-details.component';
+import { ItemComponent } from './product/details/item/item.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +25,9 @@ import { DetailsComponent } from './product/details/details.component';
     DetailsComponent,
     CertificadosComponent,
     HomeComponent,
-    FavoritosComponent,
-    viewPDFComponent,
-    fichaTecnicaComponent,
-    viewVideoComponent,
     SidebarComponent,
+    ItemDetailsComponent,
+    ItemComponent,
   ],
   imports: [
     BrowserModule,

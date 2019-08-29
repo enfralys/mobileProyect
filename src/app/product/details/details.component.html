@@ -8,8 +8,8 @@
         </nav>
     </div>
 
-    <div class="product-child">
-        <div class="items-products" *ngFor="let subcategory of subcategories">
+    <div class="product-child" *ngFor="let subcategory of subcategories">
+        <div class="items-products" [routerLink]="['./item/', subcategory.id]">
             <div class="side-itemr">
                 <p class="side-item-name">{{ subcategory.name }}</p>
             </div>

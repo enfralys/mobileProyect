@@ -1,0 +1,10 @@
+<app-sidebar></app-sidebar>
+<div class="content">
+    <div class="contenedor" *ngFor="let product of products" [routerLink]="['./item-details/', product.id]">
+        <img class="image" src="http://159.89.190.139:3000/{{ product.path_data }}">
+        <div class="centrado">
+            <p class="text">{{ product.product }}</p>
+        </div>
+    </div>
+
+</div>
