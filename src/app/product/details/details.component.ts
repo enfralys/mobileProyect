@@ -30,8 +30,8 @@ export class DetailsComponent implements OnInit {
     this.service.getSubcategory(this.catId).subscribe(data => {
       let source: any = data;
       console.log(this.catId)
-      console.log(source.data)
-      this.subcategories = source.data;
+      console.log(source.datos)
+      this.subcategories = source.datos;
     });
   }
 
