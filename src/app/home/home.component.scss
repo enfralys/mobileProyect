@@ -7,6 +7,15 @@
     align-items: center;
 }
 
+.logos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 2em;
+    justify-content: space-around;
+    background-color: white;
+}
+
 .full {
     height: 100%;
     width: 100%;

@@ -1,18 +1,28 @@
 <app-sidebar></app-sidebar>
 
 <body id="html">
-    <div>
-        <div class="cert">
-            <img src="assets/certificados/bpm.png"><img src="assets/certificados/ce.png">
+    <div class="grid">
+        <div class="cert" *ngFor="let certified of certificates">
+            <img class="img-responsive" src="http://159.89.190.139:3000/{{ certified.path_data }}">
+        </div>
+        <!-- <div class="cert">
+            <img src="assets/certificados/ce.png">
         </div>
         <div class="cert">
-            <img src="assets/certificados/invima.png"><img src="assets/certificados/iqnet.png">
+            <img src="assets/certificados/invima.png">
         </div>
         <div class="cert">
-            <img src="assets/certificados/iso.png"><img src="assets/certificados/sfda.png">
+            <img src="assets/certificados/iqnet.png">
         </div>
         <div class="cert">
-            <img src="assets/certificados/bpm.png"> <img src="assets/certificados/sfda.png" style="opacity: 0;">
+            <img src="assets/certificados/iso.png">
         </div>
+        <div class="cert">
+            <img src="assets/certificados/bpm.png">
+        </div>
+        <div class="cert">
+            <img src="assets/certificados/sfda.png">
+        </div> -->
     </div>
+
 </body>

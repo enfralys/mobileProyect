@@ -5,12 +5,10 @@ import { ARComponent } from './ar/ar.component';
 import { ProductComponent } from './product/product.component';
 import { CertificadosComponent } from './certificados/certificados.component';
 import { HomeComponent } from './home/home.component';
-import { FavoritosComponent } from './favoritos/favoritos.component';
-import { viewPDFComponent } from './favoritos/viewpdf/viewpdf.components';
-import { fichaTecnicaComponent } from './favoritos/ficha_tecnica/fichaTecnica.component';
-import { viewVideoComponent } from './favoritos/viewVideo/viewVideo.compoent';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DetailsComponent } from './product/details/details.component';
+import { ItemComponent } from './product/details/item/item.component';
+import { ItemDetailsComponent } from './product/details/item/item-details/item-details.component';
 
 
 const routes: Routes = [
@@ -30,22 +28,18 @@ const routes: Routes = [
     path: 'product-list/details/:id', component: DetailsComponent
   },
   {
+    path: 'product-list/details/:id/item/:id', component: ItemComponent
+  },
+  {
+    path: 'product-list/details/:id/item/:id/item-details/:id', component: ItemDetailsComponent
+  },
+  {
     path: 'certificado', component: CertificadosComponent
   },
   {
     path: 'home', component: HomeComponent
   },
-  {
-    path: 'favoritos', component: FavoritosComponent
-  },{
-    path: 'viewpdf', component: viewPDFComponent
-  },
-  {
-    path: 'fichaTecnica', component: fichaTecnicaComponent
-  },
-  {
-    path: 'viewVideo', component: viewVideoComponent
-  },
+
   {
     path: 'sidebar', component: SidebarComponent
   }
