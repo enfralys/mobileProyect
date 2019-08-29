@@ -1,0 +1,32 @@
+.side-itemr {
+    display: flex;
+    width: 100%;
+    color: #2D3942;
+    background-color: #EDEDED;
+    justify-content: center;
+    align-items: center;
+    border-color: #c3bdbd;
+    border-right-color: rgb(195, 189, 189);
+    border-left-color: rgb(195, 189, 189);
+    border-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-left: 0px;
+    border-left-width: 0px;
+    border-right: 0px;
+    border-right-width: 0px;
+    border-width: 1px;
+}
+
+.side-itemr p {
+    margin-left: unset;
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 4%;
+}
+
+p {
+    margin-left: 7%;
+    font-weight: 700;
+    font-size: 28px;
+}

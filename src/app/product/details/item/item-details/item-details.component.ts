@@ -29,7 +29,6 @@ export class ItemDetailsComponent implements OnInit {
     this.productId = this.router.snapshot.paramMap.get('id');
     this.service.getItemById(this.productId).subscribe(data => {
       let source: any = data;
-      console.log(source.datos)
       this.item = source.data;
     });
   }
