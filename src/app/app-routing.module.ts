@@ -9,6 +9,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DetailsComponent } from './product/details/details.component';
 import { ItemComponent } from './product/details/item/item.component';
 import { ItemDetailsComponent } from './product/details/item/item-details/item-details.component';
+import { InsQxComponent } from './product/details/item/item-details/ins-qx/ins-qx.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,9 @@ const routes: Routes = [
   },
   {
     path: 'product-list/details/:id/item/:id/item-details/:id', component: ItemDetailsComponent
+  },
+  {
+    path: 'product-list/details/:id/item/:id/item-details/:id/insqx/:id', component: InsQxComponent
   },
   {
     path: 'certificado', component: CertificadosComponent

@@ -15,6 +15,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DetailsComponent } from './product/details/details.component';
 import { ItemDetailsComponent } from './product/details/item/item-details/item-details.component';
 import { ItemComponent } from './product/details/item/item.component';
+import { InsQxComponent } from './product/details/item/item-details/ins-qx/ins-qx.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ItemComponent } from './product/details/item/item.component';
     CertificadosComponent,
     HomeComponent,
     SidebarComponent,
+    InsQxComponent,
     ItemDetailsComponent,
     ItemComponent,
   ],
