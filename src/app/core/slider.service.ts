@@ -8,7 +8,7 @@ export class SliderService {
 
   constructor(public http: HttpClient) { }
 
-  server = "http://167.99.2.33:5000"
+  server = "http://159.89.190.139:5000"
 
   getSlider() {
     let json = {

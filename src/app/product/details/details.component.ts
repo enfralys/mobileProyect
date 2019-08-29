@@ -29,6 +29,7 @@ export class DetailsComponent implements OnInit {
     this.catId = this.router.snapshot.paramMap.get('id');
     this.service.getSubcategory(this.catId).subscribe(data => {
       let source: any = data;
+      console.log(this.catId)
       console.log(source.data)
       this.subcategories = source.data;
     });
