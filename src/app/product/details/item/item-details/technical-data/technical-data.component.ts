@@ -10,7 +10,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class TechnicalDataComponent implements OnInit {
 
-  item: any[];
+  pdf: boolean = false;
+  video: boolean = false;
   productId;
 
   constructor(
@@ -27,8 +28,15 @@ export class TechnicalDataComponent implements OnInit {
     this.productId = this.router.snapshot.paramMap.get('id');
     this.service.getproductitems(this.productId).subscribe(data => {
       let source: any = data;
-      console.log(source.data)
-      this.item = source.data;
+      source.data.forEach(data => {
+        if (data.type === "ftPdf") {
+          this.pdf = true;
+        }
+        else if (data.type === "ftVideo")
+        {
+          this.video = true;
+        }
+      });
     });
   }
 

@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ItemDetailsComponent implements OnInit {
 
-  item: any[];
+  item: any;
   productId;
 
   constructor(
@@ -28,6 +28,7 @@ export class ItemDetailsComponent implements OnInit {
     this.productId = this.router.snapshot.paramMap.get('id');
     this.service.getItemById(this.productId).subscribe(data => {
       let source: any = data;
+      console.log(source.data)
       this.item = source.data;
     });
   }
