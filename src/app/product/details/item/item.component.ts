@@ -30,7 +30,7 @@ export class ItemComponent implements OnInit {
     this.service.getItem(this.subCatId).subscribe(data => {
       let source: any = data;
       console.log(this.subCatId)
-      console.log(source.datos)
+      console.log(source.data)
       this.products = source.data;
     });
   }

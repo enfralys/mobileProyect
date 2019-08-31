@@ -1,54 +1,10 @@
-<div class="principal">
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav" st>
-            <img (click)="back()" src="assets/logos/atras.png">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="openNav()">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        </nav>
-    </div>
-
-    <div class="product-child" *ngFor="let subcategory of subcategories">
+<app-sidebar></app-sidebar>
+<ng-container *ngFor="let subcategory of subcategories">
+    <div class="product-child" *ngIf="subcategory.status === 1">
         <div class="items-products" [routerLink]="['./item/', subcategory.id]">
             <div class="side-itemr">
                 <p class="side-item-name">{{ subcategory.name }}</p>
             </div>
         </div>
     </div>
-
-    <!-- Sidebar Navigation-->
-    <div id="slide-out" class="side-nav fixed">
-        <div id="mySidenav" class="sidenav">
-            <div style="width: 70% ;background-color: #EDEDED;">
-                <div class="side">
-                    <img src="assets/logos/logo.png" routerLink="/home" style="width: 60%; margin-top: 20px;margin-bottom: 20px">
-                </div>
-                <hr>
-                <div class="side-item" routerLink="/home">
-                    <img class="ico" src="assets/logos/home.png">
-                    <p>Inicio</p>
-                </div>
-                <hr>
-                <div class="side-item" routerLink="/ar">
-                    <img class="ico" src="assets/logos/ar.png">
-                    <p>AR</p>
-                </div>
-                <div class="side-item" routerLink="/product">
-                    <img class="ico" src="assets/logos/productos.png">
-                    <p>Productos</p>
-                </div>
-                <div class="side-item" routerLink="/certificado">
-                    <img class="ico" src="assets/logos/certificados.png">
-                    <p>Certificados</p>
-                </div>
-            </div>
-            <div (click)="closeNav()" style="
-                  width: 30%;
-                  height: 100%;
-                  background-color: black;
-                  opacity: 0.6;">
-            </div>
-        </div>
-    </div>
-    <!-- Sidebar navigation -->
-</div>
+</ng-container>
