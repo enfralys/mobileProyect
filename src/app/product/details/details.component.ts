@@ -12,6 +12,7 @@ export class DetailsComponent implements OnInit {
 
   subcategories: any[];
   catId;
+  obj: {};
 
   constructor(
     private router: ActivatedRoute,
@@ -31,7 +32,14 @@ export class DetailsComponent implements OnInit {
       let source: any = data;
       console.log(this.catId)
       console.log(source.datos)
-      this.subcategories = source.datos;
+      this.obj = Object.keys(source.datos).length === 0;
+      if (this.obj !== 'undefined' && source.datos.length > 0) {
+        this.subcategories = source.datos;
+        this.obj = true;
+        console.log('¡Pasó!')
+      } else {
+        console.log(this.obj)
+      }
     });
   }
 
@@ -40,15 +48,4 @@ export class DetailsComponent implements OnInit {
     console.log('BACK')
   }
 
-  openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-    document.getElementById("nav").style.display = "none";
-
-  }
-
-  closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    // document.body.style.backgroundColor = "white";
-    document.getElementById("nav").style.display = "";
-  }
 }
