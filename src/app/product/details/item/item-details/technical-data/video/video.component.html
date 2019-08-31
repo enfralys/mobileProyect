@@ -2,19 +2,19 @@
 <div class="base">
     <div class="contenedor" style="text-align: left">
         <div class="container">
-            <div class="row" *ngFor="let items of item">
+            <div class="row" *ngFor="let items of item;let indice = index;">
                 <div class="video-container" *ngIf="items.type === 'ftVideo'">
                     <div class="video-wrapper">
                         <div class="video-box">
-                            <video controls="" class="vdo">
+                            <video controls="" class="vdo" [id]="indice">
                               <source src="http://159.89.190.139:3000{{items.path_data}}" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <div #play (click)="clickButton();" class="play"></div>
+                            <div #play (click)="plays(indice);" class="play"></div>
                         </div>
-                        <h3 class="title">{{ items.name }}</h3>
+                        <h3 class="title">{{ items.name }} </h3>
                         <p class="text">
-                            <small>1:36</small>
+                            <small>{{duration}} {{indice}}</small>
                         </p>
                     </div>
                 </div>

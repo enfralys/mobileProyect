@@ -1,17 +1,10 @@
 <app-sidebar></app-sidebar>
 <div class="product-child">
     <div class="items-products">
-<<<<<<< HEAD
-        <div class="side-itemr" [routerLink]="['./pdf/', productId]">
-            <p>PDF</p>
-        </div>
-        <div class=" side-itemr ">
-=======
         <div class="side-itemr" *ngIf="pdf" [routerLink]="['./pdf/', productId]">
             <p>PDF</p>
         </div>
         <div class="side-itemr" *ngIf="video" [routerLink]="['./videos/', productId]">
->>>>>>> 1aef04fbdbea408c32e5fd100a4dfa90d4094428
             <p>Videos Filmicos</p>
         </div>
     </div>

@@ -1,7 +1,7 @@
-import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, Renderer2,AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ItemService } from '../../../../../../core/item.service';
-
+import * as v from '../../../../../../../assets/video.js';
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
@@ -24,6 +24,18 @@ export class VideoComponent implements OnInit {
     this.loadData();
   }
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+
+ 
+  }
+
+  plays(a){
+   console.log(a.toString()) 
+   v.play(a);
+   
+   
   }
 
   loadData() {
