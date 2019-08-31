@@ -1,4 +1,4 @@
-<div class="principal">
+<div class="principal animated fadeInDown" id="navbar">
     <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav" st>
             <img (click)="back()" src="assets/logos/atras.png">
@@ -11,7 +11,7 @@
     <!-- Sidebar Navigation-->
     <div id="slide-out" class="side-nav fixed">
         <div id="mySidenav" class="sidenav">
-            <div style="width: 70% ;background-color: #EDEDED;">
+            <div style="width: 100% ;background-color: #EDEDED;">
                 <div class="side">
                     <img src="assets/logos/logo.png" routerLink="/home" style="width: 60%; margin-top: 20px;margin-bottom: 20px">
                 </div>
@@ -32,6 +32,10 @@
                 <div class="side-item" routerLink="/certificado">
                     <img class="ico" src="assets/logos/certificados.png">
                     <p>Certificados</p>
+                </div>
+                <div class="side-item" routerLink="/favorites">
+                    <img class="ico" src="assets/logos/favoritos.png">
+                    <p>Favoritos</p>
                 </div>
             </div>
             <div (click)="closeNav()" style="

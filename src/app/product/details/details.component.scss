@@ -130,7 +130,6 @@ hr {
     font-size: 28px;
     /* height: 100vh; */
     /* right: 0px; */
-    margin-top: unset;
     text-transform: uppercase;
 }
 
@@ -211,4 +210,23 @@ body {
         height: 50px;
         margin-left: 45%;
     }
+}
+
+.container {
+    padding: .75em;
+}
+
+
+/* The alert message box */
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+.alert.info {
+    background-color: #2196F3;
 }

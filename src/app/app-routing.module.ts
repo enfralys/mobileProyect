@@ -12,6 +12,7 @@ import { ItemDetailsComponent } from './product/details/item/item-details/item-d
 import { TechnicalDataComponent } from './product/details/item/item-details/technical-data/technical-data.component';
 import { InsQxComponent } from './product/details/item/item-details/ins-qx/ins-qx.component';
 import { PdfComponent } from './product/details/item/item-details/technical-data/pdf/pdf.component';
+import { VideoComponent } from './product/details/item/item-details/technical-data/video/video.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,9 @@ const routes: Routes = [
   },
   {
     path: 'product-list/details/:id/item/:id/item-details/:id/technical-data/:id/pdf/:id', component: PdfComponent
+  },
+  {
+    path: 'product-list/details/:id/item/:id/item-details/:id/technical-data/:id/videos/:id', component: VideoComponent
   },
   {
     path: 'product-list/details/:id/item/:id/item-details/:id/insqx/:id', component: InsQxComponent

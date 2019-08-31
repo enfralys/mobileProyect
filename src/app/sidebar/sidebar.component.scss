@@ -160,58 +160,11 @@ p {
     background-image: url("../../assets/logos/menu.png")
 }
 
-.productos {
-    display: unset;
-}
-
-.full {
-    height: 100%;
+.sticky {
+    background: #EDEDED;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .08);
+    position: fixed;
+    top: 0;
+    height: 120px;
     width: 100%;
-}
-
-.contenedor {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-}
-
-.centrado {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-body {
-    background-color: #EDEDED;
-}
-
-.list-group-item {
-    display: flex;
-    border-right: 0;
-    border-left: 0;
-    border-radius: 0;
-    color: #2D3942;
-    background-color: #EDEDED;
-}
-
-@media (min-width: 300px)and(max-width: 768px) {
-    #fav {
-        height: 50px;
-        margin-left: 40%;
-    }
-}
-
-@media (min-width: 768px) {
-    .principal {
-        padding: .75em;
-    }
-}
-
-@media (min-width: 1024px)and(max-width: 1025px) {
-    #fav {
-        height: 50px;
-        margin-left: 45%;
-    }
 }

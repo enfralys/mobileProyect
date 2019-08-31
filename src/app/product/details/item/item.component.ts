@@ -12,6 +12,7 @@ export class ItemComponent implements OnInit {
 
   products: any[];
   subCatId;
+  obj = {};
 
   constructor(
     private router: ActivatedRoute,
@@ -31,7 +32,14 @@ export class ItemComponent implements OnInit {
       let source: any = data;
       console.log(this.subCatId)
       console.log(source.data)
-      this.products = source.data;
+      this.obj = Object.keys(source.data).length === 0;
+      if (this.obj !== 'undefined' && source.data.length > 0) {
+        this.products = source.data;
+        this.obj = true;
+        console.log('¡Pasó!')
+      } else {
+        console.log(this.obj)
+      }
     });
   }
 
