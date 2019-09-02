@@ -3,7 +3,7 @@
     <div class="centrar">
         <p>{{ item.product }} </p>
     </div>
-    <div class="centrar">
+    <div class="centrar" [routerLink]="['./animation', item.id]">
         <img class="img-responsive" src="./assets/logos/iconoanimacion.png" alt="">
     </div>
     <div class="centrar" [routerLink]="['./technical-data', item.id]">

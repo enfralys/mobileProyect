@@ -19,6 +19,8 @@ import { TechnicalDataComponent } from './product/details/item/item-details/tech
 import { InsQxComponent } from './product/details/item/item-details/ins-qx/ins-qx.component';
 import { PdfComponent } from './product/details/item/item-details/technical-data/pdf/pdf.component';
 import { VideoComponent } from './product/details/item/item-details/technical-data/video/video.component';
+import { AnimationComponent } from './product/details/item/item-details/animation/animation.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { VideoComponent } from './product/details/item/item-details/technical-da
     TechnicalDataComponent,
     PdfComponent,
     VideoComponent,
+    AnimationComponent,
+    FavoriteComponent,
   ],
   imports: [
     BrowserModule,

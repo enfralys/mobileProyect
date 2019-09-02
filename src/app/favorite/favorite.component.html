@@ -1,0 +1,9 @@
+<app-sidebar></app-sidebar>
+<ng-container *ngFor="let category of categories">
+    <div id="productos" *ngIf="category.status === 1">
+        <div class="side-itemp" [routerLink]="['./details/', category.id]">
+            <img class="ico" src="http://159.89.190.139:3000/{{ category.path_image }}">
+            <p>{{ category.category }}</p>
+        </div>
+    </div>
+</ng-container>
