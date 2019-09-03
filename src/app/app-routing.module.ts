@@ -15,6 +15,8 @@ import { PdfComponent } from './product/details/item/item-details/technical-data
 import { VideoComponent } from './product/details/item/item-details/technical-data/video/video.component';
 import { AnimationComponent } from './product/details/item/item-details/animation/animation.component';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { Model3dComponent } from './product/details/item/item-details/model3d/model3d.component';
+import { ArComponent } from './product/details/item/item-details/model3d/AR/AR.component';
 
 
 const routes: Routes = [
@@ -44,6 +46,12 @@ const routes: Routes = [
   },
   {
     path: 'product-list/details/:id/item/:id/item-details/:id/technical-data/:id', component: TechnicalDataComponent
+  },
+  {
+    path: 'product-list/details/:id/item/:id/item-details/:id/model3d/:id', component: Model3dComponent
+  },
+  {
+    path: 'product-list/details/:id/item/:id/item-details/:id/model3d/:id/AR/:id', component:ArComponent
   },
   {
     path: 'product-list/details/:id/item/:id/item-details/:id/technical-data/:id/pdf/:id', component: PdfComponent
