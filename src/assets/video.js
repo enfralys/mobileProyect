@@ -10,6 +10,7 @@ a.getVideoDuration = (a) => {
 
 a.play = (a) => {
     var v = document.getElementById(a);
+    console.log(v)
     v.play();
 }
 module.exports = a;
