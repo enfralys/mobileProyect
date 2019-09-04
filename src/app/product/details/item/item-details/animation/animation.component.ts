@@ -18,7 +18,6 @@ export class AnimationComponent implements OnInit {
 
   constructor(
     private router: ActivatedRoute,
-    private navigate: Router,
     private service: ItemService,
     private renderer: Renderer2)
   {

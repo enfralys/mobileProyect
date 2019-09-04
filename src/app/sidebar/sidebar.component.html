@@ -13,27 +13,27 @@
         <div id="mySidenav" class="sidenav">
             <div style="width: 100% ;background-color: #EDEDED;">
                 <div class="side">
-                    <img src="assets/logos/logo.png" routerLink="/home" style="width: 60%; margin-top: 20px;margin-bottom: 20px">
+                    <img src="assets/logos/logo.png" [routerLink]="['/home']" style="width: 60%; margin-top: 20px;margin-bottom: 20px">
                 </div>
                 <hr>
-                <div class="side-item" routerLink="/home">
+                <div class="side-item" [routerLink]="['/home']">
                     <img class="ico" src="assets/logos/home.png">
                     <p>Inicio</p>
                 </div>
                 <hr>
-                <div class="side-item" routerLink="/ar">
+                <div class="side-item" [routerLink]="['/ar']">
                     <img class="ico" src="assets/logos/ar.png">
                     <p>AR</p>
                 </div>
-                <div class="side-item" routerLink="/product-list">
+                <div class="side-item" [routerLink]="['/product-list']">
                     <img class="ico" src="assets/logos/productos.png">
                     <p>Productos</p>
                 </div>
-                <div class="side-item" routerLink="/certificado">
+                <div class="side-item" [routerLink]="['/certificado']">
                     <img class="ico" src="assets/logos/certificados.png">
                     <p>Certificados</p>
                 </div>
-                <div class="side-item" routerLink="/favorites">
+                <div class="side-item" [routerLink]="['/favorites']">
                     <img class="ico" src="assets/logos/favoritos.png">
                     <p>Favoritos</p>
                 </div>

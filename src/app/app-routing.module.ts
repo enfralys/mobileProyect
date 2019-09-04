@@ -20,7 +20,7 @@ import { ArComponent } from './product/details/item/item-details/model3d/AR/AR.c
 
 
 const routes: Routes = [
-   {
+  {
     path: '', redirectTo: '/home', pathMatch: 'full'
   },
   {
