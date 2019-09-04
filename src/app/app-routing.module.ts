@@ -13,6 +13,10 @@ import { TechnicalDataComponent } from './product/details/item/item-details/tech
 import { InsQxComponent } from './product/details/item/item-details/ins-qx/ins-qx.component';
 import { PdfComponent } from './product/details/item/item-details/technical-data/pdf/pdf.component';
 import { VideoComponent } from './product/details/item/item-details/technical-data/video/video.component';
+import { AnimationComponent } from './product/details/item/item-details/animation/animation.component';
+import { Model3dComponent } from './product/details/item/item-details/model3d/model3d.component';
+import { VRComponent } from './product/details/item/item-details/model3d/vr/vr.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 
 const routes: Routes = [
@@ -50,14 +54,28 @@ const routes: Routes = [
     path: 'product-list/details/:id/item/:id/item-details/:id/insqx/:id', component: InsQxComponent
   },
   {
+    path: 'product-list/details/:id/item/:id/item-details/:id/animation/:id', component: AnimationComponent
+  },
+  {
+    path: 'product-list/details/:id/item/:id/item-details/:id/model3d/:id', component: Model3dComponent
+  },
+  {
+    path: 'product-list/details/:id/item/:id/item-details/:id/model3d/:id/AR/:id', component: ARComponent
+  },
+  {
+    path: 'product-list/details/:id/item/:id/item-details/:id/model3d/:id/VR/:id', component: VRComponent
+  },
+  {
     path: 'certificado', component: CertificadosComponent
   },
   {
     path: 'home', component: HomeComponent
   },
-
   {
     path: 'sidebar', component: SidebarComponent
+  },
+  {
+    path: 'favorites', component: FavoriteComponent
   }
 
 ];

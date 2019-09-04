@@ -1,14 +1,14 @@
 import { Component, OnInit, ElementRef, ViewChild, Renderer2,AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ItemService } from '../../../../../../core/item.service';
-import * as v from '../../../../../../../assets/video.js';
+import { ItemService } from '../../../../../core/item.service';
+import * as v from '../../../../../../assets/video.js';
 
 @Component({
-  selector: 'app-video',
-  templateUrl: './video.component.html',
-  styleUrls: ['./video.component.scss']
+  selector: 'app-animation',
+  templateUrl: './animation.component.html',
+  styleUrls: ['./animation.component.scss']
 })
-export class VideoComponent implements OnInit {
+export class AnimationComponent implements OnInit {
 
   @ViewChild("play", {static: false}) play: ElementRef;
 
@@ -24,6 +24,7 @@ export class VideoComponent implements OnInit {
   {
     this.loadData();
   }
+
   ngOnInit() {
   }
 
@@ -48,6 +49,8 @@ export class VideoComponent implements OnInit {
 
   clickButton(){
     this.renderer.selectRootElement(this.play.nativeElement).click({
+
     });
   }
+
 }

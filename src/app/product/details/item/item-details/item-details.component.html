@@ -3,16 +3,16 @@
     <div class="centrar">
         <p>{{ item.product }} </p>
     </div>
-    <div class="centrar">
+    <div class="centrar" [routerLink]="['./animation', item.id]">
         <img class="img-responsive" src="./assets/logos/iconoanimacion.png" alt="">
     </div>
     <div class="centrar" [routerLink]="['./technical-data', item.id]">
         <img class="img-responsive" src="./assets/logos/iconofichatec.png" alt="">
     </div>
-    <div class="centrar">
-        <img class="img-responsive" src="./assets/logos/iconoqx.png" alt="" [routerLink]="['./insqx/', item.id]">
+    <div class="centrar" [routerLink]="['./insqx/', item.id]">
+        <img class="img-responsive" src="./assets/logos/iconoqx.png" alt="">
     </div>
-    <div class="centrar">
+    <div class="centrar" [routerLink]="['./model3d/', item.id]">
         <img class="img-responsive" src="./assets/logos/iconomodel3d.png" alt="">
     </div>
 </div>
