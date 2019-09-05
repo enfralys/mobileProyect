@@ -1,51 +1,13 @@
-/* The side navigation menu */
-
-h5 {
-    font-weight: 700;
-    font-size: 28px;
-    margin-top: 4%;
-}
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    display: flex;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #EDEDED;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 
 #main {
     transition: margin-left .5s;
     padding: 20px;
+}
+
+#productos {
+    background-color: #fff;
+    min-height: 93vh;
 }
 
 
@@ -67,13 +29,15 @@ h5 {
     width: 100%;
 }
 
-.ico {
-    width: 18%;
+.ico-img {
+    width: 20%;
     height: 60.4333px;
     margin-left: 3%;
     background-repeat: no-repeat;
     background-position: 50%;
     border-radius: 10%;
+    border-color: #000000;
+    border-style: solid;
     background-size: 100% auto;
 }
 
@@ -101,14 +65,15 @@ hr {
     color: #2D3942;
     justify-content: stretch;
     align-items: center;
-    border-color: #c3bdbd;
-    border-style: solid;
-    border-width: 1px;
-    background-color: #EDEDED;
+    padding: 3%;
+    // border-color: #c3bdbd;
+    // border-style: solid;
+    // border-width: 1px;
+    // background-color: #EDEDED;
 }
 
 .side-itemp p {
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .side-itemr {
@@ -157,14 +122,6 @@ p {
     margin-top: 4%;
 }
 
-.navbar {
-    background-color: #EDEDED!important;
-}
-
-.navbar-light .navbar-toggler-icon {
-    background-image: url("../../assets/logos/menu.png")
-}
-
 .productos {
     display: unset;
 }
@@ -189,7 +146,7 @@ p {
 }
 
 body {
-    background-color: #EDEDED;
+    background-color: #FFF;
 }
 
 .list-group-item {
@@ -213,14 +170,17 @@ body {
         height: 50px;
         margin-left: 45%;
     }
+    p {
+        margin-top: 1%;
+        margin-left: 2%;
+        font-weight: 700;
+        font-size: 48px;
+    }
 }
 
 @media (min-width: 768px) {
-    p {
-        margin-top: 2%;
-    }
-    .ico {
-        width: 20%;
-        height: 160px;
+    .ico-img {
+        width: 10%;
+        height: 90px;
     }
 }

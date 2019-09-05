@@ -1,29 +1,24 @@
 <app-sidebar></app-sidebar>
-<div class="content">
-    <ng-container *ngIf="obj == false">
-        <div class="container">
-            <div class="alert info">
-                <strong>¡Ups!</strong> Al parecer no se encuentran productos disponibles.
+<div class="item">
+    <div class="content">
+        <ng-container *ngIf="obj == false">
+            <div class="container">
+                <div class="alert info">
+                    <strong>¡Ups!</strong> Al parecer no se encuentran productos disponibles.
+                </div>
             </div>
-        </div>
-    </ng-container>
-    <ng-container *ngIf="obj != false">
-        <ng-container *ngFor="let product of products">
-            <ng-container *ngIf="product.status === 1">
-                <div class="contenedor" [routerLink]="['./item-details/', product.id]">
-                    <img class="image" src="http://159.89.190.139:3000/{{ product.path_data }}">
-                    <div class="centrado">
-                        <p class="text">{{ product.product }}</p>
+        </ng-container>
+        <ng-container *ngIf="obj != false">
+            <ng-container *ngFor="let product of products">
+                <ng-container *ngIf="product.status === 1">
+                    <div class="contenedor" [routerLink]="['./item-details/', product.id]">
+                        <img class="image" src="http://159.89.190.139:3000/{{ product.path_data }}">
+                        <div class="centrado">
+                            <p class="text">{{ product.product }}</p>
+                        </div>
                     </div>
-                </div>
-            </ng-container>
-            <ng-container *ngIf="product.status !== 1">
-                <div class="container">
-                    <div class="alert info">
-                        <strong>¡Ups!</strong> Al parecer no hay productos disponibles.
-                    </div>
-                </div>
+                </ng-container>
             </ng-container>
         </ng-container>
-    </ng-container>
+    </div>
 </div>

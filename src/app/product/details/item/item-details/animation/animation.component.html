@@ -1,24 +1,35 @@
 <app-sidebar></app-sidebar>
 <div class="base">
     <div class="contenedor" style="text-align: left">
-        <div class="container">
-            <div class="row" *ngFor="let items of item; let indice = index;">
-                <div class="video-container" *ngIf="items.type === 'animation'">
-                    <div class="video-wrapper">
-                        <div class="video-box">
-                            <video controls="" class="vdo" [id]="indice">
-                            <source src="http://159.89.190.139:3000{{items.path_data}}" type="video/mp4">
-                              Your browser does not support the video tag.
-                          </video>
-                            <div #play (click)="plays(indice);" class="play"></div>
-                        </div>
-                        <h3 class="title">{{ items.name }} </h3>
-                        <p class="text">
-                            <small>{{duration}} {{indice}}</small>
-                        </p>
-                    </div>
+        <ng-container *ngIf="obj == false">
+            <div class="container">
+                <div class="alert info">
+                    <strong>¡Ups!</strong> Este producto no contiene animaciones disponibles.
                 </div>
             </div>
-        </div>
+        </ng-container>
+        <ng-container *ngIf="obj != false">
+            <div class="container">
+                <div class="row" *ngFor="let items of item; let indice = index;">
+                    <ng-container *ngIf="items.type === 'animation'">
+                        <div class="video-container">
+                            <div class="video-wrapper">
+                                <div class="video-box">
+                                    <video controls="" class="vdo" [id]="indice">
+                              <source src="http://159.89.190.139:3000{{items.path_data}}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                                    <div #play (click)="plays(indice);" class="play"></div>
+                                </div>
+                                <h3 class="title">{{ items.name }} </h3>
+                                <p class="text">
+                                    <small>{{duration}} {{indice}}</small>
+                                </p>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
     </div>
 </div>

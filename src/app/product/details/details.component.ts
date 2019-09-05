@@ -16,9 +16,7 @@ export class DetailsComponent implements OnInit {
 
   constructor(
     private router: ActivatedRoute,
-    private navigate: Router,
-    private service: SubcategoryService,
-    private _location: Location)
+    private service: SubcategoryService)
   {
     this.loadData();
   }
@@ -30,22 +28,19 @@ export class DetailsComponent implements OnInit {
     this.catId = this.router.snapshot.paramMap.get('id');
     this.service.getSubcategory(this.catId).subscribe(data => {
       let source: any = data;
-      console.log(this.catId)
-      console.log(source.datos)
       this.obj = Object.keys(source.datos).length === 0;
       if (this.obj !== 'undefined' && source.datos.length > 0) {
-        this.subcategories = source.datos;
-        this.obj = true;
-        console.log('¡Pasó!')
+        for (let ani of source.datos) {
+          if (ani.status === 1) {
+            this.subcategories = source.datos;
+            this.obj = true;
+          } else {
+            this.obj = false;
+          }
+        }
       } else {
         console.log(this.obj)
       }
     });
   }
-
-  back() {
-    this._location.back()
-    console.log('BACK')
-  }
-
 }

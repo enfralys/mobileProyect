@@ -35,8 +35,13 @@ export class ItemComponent implements OnInit {
       this.obj = Object.keys(source.data).length === 0;
       if (this.obj !== 'undefined' && source.data.length > 0) {
         this.products = source.data;
-        this.obj = true;
-        console.log('¡Pasó!')
+        for (let product of this.products) {
+          if (product.status === 1) {
+            this.obj = true;
+          } else {
+            this.obj = false;
+          }
+        }
       } else {
         console.log(this.obj)
       }

@@ -30,11 +30,22 @@ body {
 
 @media (min-width: 768px) {
     .img-responsive {
-        width: 247px;
-        height: 243px;
         background-repeat: no-repeat;
         background-position: 50%;
         border-radius: 20%;
         background-size: 100% auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 50% 50%;
+        padding: 80px 50px;
+    }
+    #logos {
+        display: none;
+        text-align: center;
+        height: 100%;
     }
 }

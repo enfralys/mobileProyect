@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef, ViewChild, Renderer2,AfterViewInit } fro
 import { ActivatedRoute, Router } from '@angular/router';
 import { ItemService } from '../../../../../../core/item.service';
 import * as v from '../../../../../../../assets/video.js';
+
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
@@ -32,7 +33,6 @@ export class VideoComponent implements OnInit {
   plays(a){
    console.log(a.toString())
    v.play(a);
-
   }
 
   loadData() {
@@ -43,6 +43,11 @@ export class VideoComponent implements OnInit {
       this.item = source.data;
       this.duration = document.getElementById(source.data.path_data);
       console.log(this.duration);
+    });
+  }
+
+  clickButton(){
+    this.renderer.selectRootElement(this.play.nativeElement).click({
     });
   }
 }

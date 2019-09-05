@@ -24,9 +24,6 @@ const routes: Routes = [
     path: '', redirectTo: '/home', pathMatch: 'full'
   },
   {
-  path: 'dashboard', component: DashboardComponent,
-  },
-  {
     path: 'ar', component: ARComponent
   },
   {
@@ -66,7 +63,7 @@ const routes: Routes = [
     path: 'product-list/details/:id/item/:id/item-details/:id/animation/:id', component: AnimationComponent
   },
   {
-    path: 'certificado', component: CertificadosComponent
+    path: 'certificates', component: CertificadosComponent
   },
   {
     path: 'home', component: HomeComponent

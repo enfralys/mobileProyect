@@ -13,6 +13,7 @@ export class TechnicalDataComponent implements OnInit {
   pdf: boolean = false;
   video: boolean = false;
   productId;
+  obj = {};
 
   constructor(
     private router: ActivatedRoute,
@@ -35,6 +36,11 @@ export class TechnicalDataComponent implements OnInit {
         else if (data.type === "ftVideo")
         {
           this.video = true;
+        }
+        else
+        {
+          this.obj = false;
+          console.log(this.obj)
         }
       });
     });
