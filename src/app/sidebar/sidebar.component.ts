@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Location} from '@angular/common'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,14 +9,18 @@ import {Location} from '@angular/common'
 })
 export class SidebarComponent implements OnInit {
 
-  constructor(private _location : Location) { }
+  constructor(private _location : Location,private router:Router) { }
 
   ngOnInit() {
+    console.log("Manu aqui se esta imprimiendo la variable que necesitas linea 15 sidebar.component" ,this.router.url)
   }
+
   back(){
     this._location.back()
     console.log('BACK')
   }
+
+
  openNav() {
     document.getElementById("mySidenav").style.width = "100%";
     document.getElementById("nav").style.display = "none";
