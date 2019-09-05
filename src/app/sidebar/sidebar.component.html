@@ -1,11 +1,23 @@
 <div class="principal animated fadeInDown" id="navbar">
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav" st>
-            <img (click)="back()" src="assets/logos/atras.png">
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="openNav()">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <nav class="{{ route == '/home' ? 'navbar-dash' : '' }} navbar navbar-expand-lg navbar-light bg-light" id="nav" st>
+            <ng-container *ngIf="route != '/home'">
+                <img (click)="back()" src="assets/logos/atras.png">
+            </ng-container>
+            <ng-container *ngIf="route == '/product-list'">
+                <img style="width: 14%" src="assets/logos/start.png">
+            </ng-container>
+            <ng-container *ngIf="route == '/favorites'">
+                <img style="width: 12%" src="assets/logos/estrella_llena.png">
+            </ng-container>
+            <ng-container *ngIf="route != '/certificado'">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="openNav()">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </ng-container>
+            <ng-container *ngIf="route == '/home'">
+                <img style="width: 40%; margin-left: 16%;" src="assets/logos/logo.png" routerLink="/home">
+            </ng-container>
         </nav>
     </div>
     <!-- Sidebar Navigation-->

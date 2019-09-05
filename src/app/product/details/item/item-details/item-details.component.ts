@@ -2,6 +2,7 @@ import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../../../../core/item.service';
 import { Router, ActivatedRoute } from '@angular/router';
+// import * as v from '../../../../../assets/minejs.js';
 
 @Component({
   selector: 'app-item-details',
@@ -23,6 +24,12 @@ export class ItemDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
+
+    // test(te){
+    //   let a = v;
+    //   console.log(a);
+    //   a.test(te);
+    // }
 
   loadData() {
     this.productId = this.router.snapshot.paramMap.get('id');

@@ -20,16 +20,16 @@ import { InsQxComponent } from './product/details/item/item-details/ins-qx/ins-q
 import { PdfComponent } from './product/details/item/item-details/technical-data/pdf/pdf.component';
 import { VideoComponent } from './product/details/item/item-details/technical-data/video/video.component';
 import { AnimationComponent } from './product/details/item/item-details/animation/animation.component';
-import { Model3dComponent } from './product/details/item/item-details/model3d/model3d.component';
-import { VRComponent } from './product/details/item/item-details/model3d/vr/vr.component';
 import { FavoriteComponent } from './favorite/favorite.component';
-
+import { Model3dComponent } from './product/details/item/item-details/model3d/model3d.component';
+import { ArComponent } from './product/details/item/item-details/model3d/AR/AR.component';
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     ARComponent,
     ProductComponent,
+    ArComponent,
     DetailsComponent,
     CertificadosComponent,
     HomeComponent,
@@ -40,9 +40,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
     TechnicalDataComponent,
     PdfComponent,
     VideoComponent,
-    AnimationComponent,
     Model3dComponent,
-    VRComponent,
+    AnimationComponent,
     FavoriteComponent,
   ],
   imports: [

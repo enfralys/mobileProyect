@@ -1,12 +1,10 @@
-<app-dashboard></app-dashboard>
+<app-sidebar></app-sidebar>
 
 <ngb-carousel class="no-indicators">
     <ng-template ngbSlide *ngFor="let slider of sliders">
         <img src="http://159.89.190.139:3000/{{ slider.path_data }}" style="height: 345.6px; width: 100%" alt="{{ slider.name }}">
     </ng-template>
 </ngb-carousel>
-
-
 
 <div id="logos">
     <div routerLink="/ar" style=" height: 100px; width: 100px">

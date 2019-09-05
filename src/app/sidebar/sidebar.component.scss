@@ -11,7 +11,7 @@ h5 {
     width: 0;
     display: flex;
     position: fixed;
-    z-index: 1;
+    z-index: 16;
     top: 0;
     left: 0;
     background-color: #EDEDED;
@@ -154,6 +154,19 @@ p {
 
 .navbar {
     background-color: #EDEDED!important;
+    height: 55px;
+}
+
+.navbar-toggler {
+    padding: 0;
+}
+
+.navbar-dash {
+    justify-content: unset;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent;
 }
 
 .navbar-light .navbar-toggler-icon {

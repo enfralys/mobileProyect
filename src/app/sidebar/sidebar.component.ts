@@ -9,9 +9,12 @@ import { Router } from '@angular/router';
 })
 export class SidebarComponent implements OnInit {
 
+  route: string;
+
   constructor(private _location : Location,private router:Router) { }
 
   ngOnInit() {
+    this.route = this.router.url;
     console.log("Manu aqui se esta imprimiendo la variable que necesitas linea 15 sidebar.component" ,this.router.url)
   }
 
