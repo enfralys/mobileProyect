@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { SliderService } from '../core/slider.service';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Route, Router } from '@angular/router';
@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  @HostListener('window:resize', ['$event'])
   onResize(event) {
     if (event.target.innerWidth === 320) { // 320px portrait
       this.mobile = true;
