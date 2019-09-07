@@ -191,8 +191,15 @@ p {
 }
 
 @media (min-width: 768px) {
+    .navbar {
+        background-color: #EDEDED !important;
+        height: auto;
+    }
     .fav-star {
         width: 6%;
+    }
+    .nav-logo {
+        margin-left: 26%;
     }
 }
 
