@@ -24,6 +24,11 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (window.screen.width === 320) { // 768px portrait
+      this.mobile = true;
+    } else if (window.screen.width === 768) {
+      this.mobile = false;
+    }
   }
 
   @HostListener('window:resize', ['$event'])
