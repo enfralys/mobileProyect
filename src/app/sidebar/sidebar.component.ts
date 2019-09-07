@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class SidebarComponent implements OnInit {
 
   route: string;
-
+  home;
   constructor(private _location : Location,private router:Router) { }
 
   ngOnInit() {
