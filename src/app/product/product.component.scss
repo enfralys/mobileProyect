@@ -1,25 +1,24 @@
+/* The side navigation menu */
+
+@import "../variables";
+@import "../mixins";
+.main {
+    background-color: #fff;
+    min-height: 90vh;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 4%;
+}
+
+
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 
 #main {
     transition: margin-left .5s;
     padding: 20px;
-}
-
-#productos {
-    background-color: #fff;
-    min-height: 93vh;
-}
-
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
-@media screen and (max-height: 400px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
 }
 
 .side {
@@ -29,15 +28,13 @@
     width: 100%;
 }
 
-.ico-img {
-    width: 20%;
+.ico {
+    width: 18%;
     height: 60.4333px;
     margin-left: 3%;
     background-repeat: no-repeat;
     background-position: 50%;
     border-radius: 10%;
-    border-color: #000000;
-    border-style: solid;
     background-size: 100% auto;
 }
 
@@ -65,15 +62,13 @@ hr {
     color: #2D3942;
     justify-content: stretch;
     align-items: center;
-    padding: 3%;
-    // border-color: #c3bdbd;
-    // border-style: solid;
-    // border-width: 1px;
-    // background-color: #EDEDED;
+    border-color: #c3bdbd;
+    border-style: solid;
+    border-width: 1px;
 }
 
 .side-itemp p {
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .side-itemr {
@@ -113,6 +108,11 @@ hr {
     align-items: center;
 }
 
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 p {
     margin-left: 7%;
     font-weight: 700;
@@ -120,6 +120,14 @@ p {
     /* height: 100vh; */
     /* right: 0px; */
     margin-top: 4%;
+}
+
+.navbar {
+    background-color: #EDEDED!important;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("../../assets/logos/menu.png")
 }
 
 .productos {
@@ -146,7 +154,7 @@ p {
 }
 
 body {
-    background-color: #FFF;
+    background-color: #EDEDED;
 }
 
 .list-group-item {
@@ -170,17 +178,97 @@ body {
         height: 50px;
         margin-left: 45%;
     }
-    p {
-        margin-top: 1%;
-        margin-left: 2%;
-        font-weight: 700;
-        font-size: 48px;
+}
+
+@include telefono() {
+    .container {
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 
-@media (min-width: 768px) {
-    .ico-img {
-        width: 10%;
-        height: 90px;
+@include tablet() {
+    .container {
+        max-width: 900px;
+    }
+    p {
+        margin-top: 2%;
+        padding: 10px;
+    }
+}
+
+@media (orientation: landscape) {
+    p {
+        margin-top: 2%;
+    }
+    .main {
+        display: flex;
+        background-color: #fafafa
+    }
+    .container {
+        padding-top: 4%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: fit-content;
+        grid-gap: 12px;
+    }
+    .ico {
+        width: 23%;
+        height: 95px;
+    }
+    .side-itemp {
+        border-style: none;
+        background-color: transparent;
+    }
+}
+
+//This media query if for max height 320
+@include telefono-landscape() {
+    p {
+        margin-top: 2%;
+    }
+    .main {
+        display: flex;
+        background-color: #fafafa
+    }
+    .container {
+        padding-top: 4%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: fit-content;
+        grid-gap: 12px;
+    }
+    .ico {
+        width: 23%;
+        height: 95px;
+    }
+    .side-itemp {
+        border-style: none;
+        background-color: transparent;
+    }
+}
+
+@include tablet-landscape() {
+    p {
+        margin-top: 2%;
+    }
+    .main {
+        display: flex;
+        background-color: #fafafa
+    }
+    .container {
+        padding-top: 4%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: fit-content;
+        grid-gap: 12px;
+    }
+    .ico {
+        width: 23%;
+        height: 95px;
+    }
+    .side-itemp {
+        border-style: none;
+        background-color: transparent;
     }
 }
