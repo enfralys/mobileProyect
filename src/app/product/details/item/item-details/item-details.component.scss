@@ -1,9 +1,5 @@
-.details {
-    height: 100%;
-    background-color: #fff;
-    min-height: 93vh;
-}
-
+@import "../../../../variables";
+@import "../../../../mixins";
 .centrar {
     display: flex;
     height: 12%;
@@ -20,4 +16,68 @@ p {
 .img-responsive {
     width: 262.5px;
     height: 61.2833px;
+}
+
+@include telefono-landscape() {
+    .main {
+        display: flex;
+        background-color: #fafafa
+    }
+    .internauta {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        //padding-top: 5%;
+        grid-row-gap: 10%;
+    }
+    .container {
+        //padding-top: 10%;
+    }
+    .centrar {
+        display: flex;
+        /* height: 12%; */
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+    }
+    .img-responsive {
+        width: 90%;
+        height: 50.2833px;
+    }
+    p {
+        font-weight: 770;
+        font-size: 30px;
+        color: #2c3440;
+    }
+}
+
+@include tablet-landscape() {
+    .main {
+        display: flex;
+        background-color: #fafafa
+    }
+    .internauta {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding-top: 5%;
+        grid-row-gap: 10%;
+    }
+    .container {
+        padding-top: 10%;
+    }
+    .centrar {
+        display: flex;
+        /* height: 12%; */
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+    }
+    .img-responsive {
+        width: 80%;
+        height: 120.2833px;
+    }
+    p {
+        font-weight: 770;
+        font-size: 60px;
+        color: #2c3440;
+    }
 }

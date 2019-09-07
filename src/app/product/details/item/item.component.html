@@ -1,5 +1,5 @@
-<app-sidebar></app-sidebar>
-<div class="item">
+<div class="main">
+    <app-sidebar></app-sidebar>
     <div class="content">
         <ng-container *ngIf="obj == false">
             <div class="container">
@@ -15,6 +15,13 @@
                         <img class="image" src="http://159.89.190.139:3000/{{ product.path_data }}">
                         <div class="centrado">
                             <p class="text">{{ product.product }}</p>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="product.status !== 1">
+                    <div class="container">
+                        <div class="alert info">
+                            <strong>¡Ups!</strong> Al parecer no hay productos disponibles.
                         </div>
                     </div>
                 </ng-container>

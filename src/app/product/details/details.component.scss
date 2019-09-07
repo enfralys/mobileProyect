@@ -1,13 +1,10 @@
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 
+@import "../../variables";
+@import "../../mixins";
 #main {
     transition: margin-left .5s;
     padding: 20px;
-}
-
-.product-child {
-    background-color: #fff;
-    min-height: 93vh;
 }
 
 
@@ -161,20 +158,6 @@ body {
     background-color: #EDEDED;
 }
 
-@media (min-width: 300px)and(max-width: 768px) {
-    #fav {
-        height: 50px;
-        margin-left: 40%;
-    }
-}
-
-@media (min-width: 1024px)and(max-width: 1025px) {
-    #fav {
-        height: 50px;
-        margin-left: 45%;
-    }
-}
-
 .container {
     padding: .75em;
 }
@@ -192,4 +175,60 @@ body {
 
 .alert.info {
     background-color: #2196F3;
+}
+
+@include telefono-landscape() {
+    .main {
+        display: flex;
+        background-color: #fafafa
+    }
+    .container {
+        display: grid;
+        //grid-template-columns: 50% 50%;
+        //grid-gap: 10px;
+        height: fit-content;
+        //padding-top: 8%;
+    }
+    .side-itemr {
+        align-items: unset;
+        display: unset;
+        text-align: center;
+        text-align: center;
+        width: 74%;
+    }
+    .product-child {
+        padding-right: 17%;
+        padding-left: 17%;
+    }
+    .container {
+        padding-bottom: 0px;
+    }
+}
+
+@include tablet-landscape() {
+    .main {
+        display: flex;
+        background-color: #fafafa
+    }
+    .container {
+        display: grid;
+        //grid-template-columns: 50% 50%;
+        grid-gap: 10px;
+        height: fit-content;
+        padding-top: 8%;
+    }
+    .side-itemr {
+        align-items: unset;
+        display: unset;
+        text-align: center;
+        text-align: center;
+        width: 74%;
+    }
+    .product-child {
+        padding-right: 17%;
+        padding-left: 17%;
+    }
+    .container {
+        padding-bottom: 0px;
+    }
 }
