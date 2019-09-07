@@ -1,3 +1,5 @@
+@import "../variables";
+@import "../mixins";
 .full {
     height: 100%;
     width: 100%;
@@ -28,7 +30,7 @@ body {
     background-color: #2C3440;
 }
 
-@media (min-width: 768px) {
+@include telefono() {
     .img-responsive {
         background-repeat: no-repeat;
         background-position: 50%;
@@ -37,15 +39,28 @@ body {
     }
 }
 
-@media (min-width: 1024px) {
+@include tablet() {
+    body {
+        min-height: 95vh;
+    }
+    .cert {
+        padding: 1.5em 0.75em;
+    }
     .grid {
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 50% 50%;
-        padding: 80px 50px;
+        grid-template-columns: 33% 33% 33%;
+        padding: 60px 60px;
     }
     #logos {
         display: none;
         text-align: center;
         height: 100%;
+    }
+    .img-responsive {
+        background-repeat: no-repeat;
+        background-position: 50%;
+        border-radius: 20%;
+        background-size: 100% auto;
+        width: 247px;
+        height: 183px;
     }
 }

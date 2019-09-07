@@ -32,10 +32,12 @@ export class TechnicalDataComponent implements OnInit {
       source.data.forEach(data => {
         if (data.type === "ftPdf") {
           this.pdf = true;
+          this.obj = true;
         }
         else if (data.type === "ftVideo")
         {
           this.video = true;
+          this.obj = true;
         }
         else
         {

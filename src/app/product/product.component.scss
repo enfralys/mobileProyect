@@ -4,7 +4,7 @@
 @import "../mixins";
 .main {
     background-color: #fff;
-    min-height: 90vh;
+    min-height: 93vh;
 }
 
 h5 {
@@ -157,6 +157,10 @@ body {
     background-color: #EDEDED;
 }
 
+.container {
+    padding: 0px;
+}
+
 .list-group-item {
     display: flex;
     border-right: 0;
@@ -181,6 +185,9 @@ body {
 }
 
 @include telefono() {
+    .main {
+        min-height: 100vh;
+    }
     .container {
         padding-right: 0;
         padding-left: 0;
@@ -188,6 +195,9 @@ body {
 }
 
 @include tablet() {
+    .main {
+        min-height: 100vh;
+    }
     .container {
         max-width: 900px;
     }
