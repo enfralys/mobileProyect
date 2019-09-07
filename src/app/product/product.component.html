@@ -1,6 +1,7 @@
 <div class="main">
-    <app-sidebar></app-sidebar>
-
+    <div class="vertical">
+        <app-sidebar></app-sidebar>
+    </div>
     <div class="container">
         <ng-container *ngFor="let category of categories">
             <div id="productos" *ngIf="category.status === 1">
