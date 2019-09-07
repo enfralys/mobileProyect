@@ -1,3 +1,5 @@
+@import "../variables";
+@import "../mixins";
 .base {
     background-color: #fff;
     min-height: 93vh;
@@ -52,5 +54,12 @@
     .full {
         height: auto;
         width: 140%;
+    }
+}
+
+@include telefono-landscape() {
+    .navimg {
+        padding-top: 100%;
+        background-color: aqua !important;
     }
 }
