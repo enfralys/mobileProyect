@@ -1,0 +1,11 @@
+<app-sidebar></app-sidebar>
+<div class="base">
+    <div class="contenedor" *ngFor="let items of item">
+        <div *ngIf="items.type === 'insQx'">
+            <img style="width: 100%" src="./assets/logos/PDF.png">
+            <div class="centrado">
+                <p class="text">{{items.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>

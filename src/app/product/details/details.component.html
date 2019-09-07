@@ -1,0 +1,34 @@
+<div class="main">
+    <app-sidebar></app-sidebar>
+
+
+    <ng-container *ngIf="obj == false">
+        <div class="container">
+            <div class="alert info">
+                <strong>¡Ups!</strong> Al parecer esta categoría no posee productos disponibles.
+            </div>
+        </div>
+    </ng-container>
+    <div class="container">
+        <ng-container *ngIf="obj">
+            <ng-container *ngFor="let subcategory of subcategories">
+                <ng-container *ngIf="subcategory.status === 1">
+                    <div class="product-child">
+                        <div class="items-products" [routerLink]="['./item/', subcategory.id]">
+                            <div class="side-itemr">
+                                <p class="side-item-name">{{ subcategory.name }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="subcategory.status !== 1">
+                    <div class="container">
+                        <div class="alert info">
+                            <strong>¡Ups!</strong> Al parecer esta categoría no posee productos disponibles.
+                        </div>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>

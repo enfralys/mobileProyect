@@ -1,0 +1,51 @@
+.full {
+    height: 100%;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.cert {
+    padding: .75em;
+    display: flex;
+    justify-content: space-around;
+    background-color: #2C3440;
+}
+
+.img-responsive {
+    width: 147px;
+    height: 143px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 20%;
+    background-size: 100% auto;
+}
+
+body {
+    background-color: #2C3440;
+}
+
+@media (min-width: 768px) {
+    .img-responsive {
+        background-repeat: no-repeat;
+        background-position: 50%;
+        border-radius: 20%;
+        background-size: 100% auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 50% 50%;
+        padding: 80px 50px;
+    }
+    #logos {
+        display: none;
+        text-align: center;
+        height: 100%;
+    }
+}

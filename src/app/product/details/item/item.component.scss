@@ -1,0 +1,116 @@
+@import "../../../variables";
+@import "../../../mixins";
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contenedor {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    padding: .25em;
+}
+
+.image {
+    width: 100%;
+    height: 97px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 40px;
+    background-size: 100% auto;
+}
+
+.centrado {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    margin-top: 40%;
+    margin-left: unset;
+    font-size: 21px;
+}
+
+p {
+    font-weight: 700;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.container {
+    padding: .75em;
+}
+
+
+/* The alert message box */
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+.alert.info {
+    background-color: #2196F3;
+}
+
+@include telefono-landscape() {
+    .main {
+        display: flex;
+        height: 100vh;
+        background-color: #fafafa
+    }
+    .content {
+        padding-top: 5%;
+        height: fit-content;
+        display: grid;
+        // grid-gap: 1px;
+        grid-template-columns: 25% 25% 25% 25%;
+        //  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    }
+    .contenedor {
+        width: 100%;
+    }
+    .text {
+        margin-top: 31%;
+    }
+    .image {
+        width: 83%;
+        height: 110px;
+    }
+}
+
+@include tablet-landscape() {
+    .main {
+        display: flex;
+        height: 100vh;
+        background-color: #fafafa
+    }
+    .content {
+        padding-top: 5%;
+        height: fit-content;
+        display: grid;
+        // grid-gap: 12px;
+        grid-template-columns: 25% 25% 25% 25%;
+        //  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    }
+    .contenedor {
+        width: 100%;
+        padding-top: 7%;
+    }
+    .text {
+        margin-top: 31%;
+    }
+    .image {
+        width: 75%;
+        height: 110px;
+    }
+}

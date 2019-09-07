@@ -1,0 +1,48 @@
+<div class="principal animated fadeInDown" id="navbar">
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav" st>
+            <img class="navimg" (click)="back()" src="assets/logos/atras.png">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="openNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+    <!-- Sidebar Navigation-->
+    <div id="slide-out" class="side-nav fixed">
+        <div id="mySidenav" class="sidenav">
+            <div style="width: 100% ;background-color: #EDEDED;">
+                <div class="side">
+                    <img src="assets/logos/logo.png" routerLink="/home" style="width: 60%; margin-top: 20px;margin-bottom: 20px">
+                </div>
+                <hr>
+                <div class="side-item" routerLink="/home">
+                    <img class="ico" src="assets/logos/home.png">
+                    <p>Inicio</p>
+                </div>
+                <hr>
+                <div class="side-item" routerLink="/ar">
+                    <img class="ico" src="assets/logos/ar.png">
+                    <p>AR</p>
+                </div>
+                <div class="side-item" routerLink="/product-list">
+                    <img class="ico" src="assets/logos/productos.png">
+                    <p>Productos</p>
+                </div>
+                <div class="side-item" routerLink="/certificado">
+                    <img class="ico" src="assets/logos/certificados.png">
+                    <p>Certificados</p>
+                </div>
+                <div class="side-item" routerLink="/favorites">
+                    <img class="ico" src="assets/logos/favoritos.png">
+                    <p>Favoritos</p>
+                </div>
+            </div>
+            <div (click)="closeNav()" style="
+                    width: 30%;
+                    height: 100%;
+                    background-color: black;
+                    opacity: 0.6;">
+            </div>
+        </div>
+    </div>

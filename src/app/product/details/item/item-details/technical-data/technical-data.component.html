@@ -1,0 +1,18 @@
+<app-sidebar></app-sidebar>
+<div class="product-child">
+    <ng-container *ngIf="obj == false">
+        <div class="container">
+            <div class="alert info">
+                <strong>¡Ups!</strong> Este producto no contiene detalles técnicos disponibles.
+            </div>
+        </div>
+    </ng-container>
+    <div class="items-products">
+        <div class="side-itemr" *ngIf="pdf" [routerLink]="['./pdf/', productId]">
+            <p>PDF</p>
+        </div>
+        <div class="side-itemr" *ngIf="video" [routerLink]="['./videos/', productId]">
+            <p>Videos Fílmicos</p>
+        </div>
+    </div>
+</div>
