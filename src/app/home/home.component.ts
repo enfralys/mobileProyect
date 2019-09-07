@@ -11,6 +11,8 @@ import { Route, Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   sliders: any[];
+  mobile: boolean;
+  slidersFormatted;
 
   constructor(private service: SliderService, config: NgbCarouselConfig,private router:Router)
   {
@@ -24,11 +26,35 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  onResize(event) {
+    if (event.target.innerWidth === 320) { // 320px portrait
+      this.mobile = true;
+    }
+    if (event.target.innerWidth === 768) { // 768px portrait
+      this.mobile = false;
+    }
+    console.log(event.target.innerWidth)
+  }
+
   loadData()
   {
     this.service.getSlider().subscribe(data => {
       let source: any = data;
       this.sliders = source.data;
+
+      this.slidersFormatted = [];
+      let j = -1;
+
+      for (let i = 0; i < this.sliders.length; i++) {
+        if (i % 4 == 0) {
+            j++;
+            this.slidersFormatted[j] = [];
+            this.slidersFormatted[j].push(this.sliders[i]);
+        }
+        else {
+            this.slidersFormatted[j].push(this.sliders[i]);
+        }
+    }
     });
   }
   openNav() {

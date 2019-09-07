@@ -247,9 +247,29 @@ p {
 }
 
 
+/* Mobile item */
+
+@include telefono() {
+    .img-carousel {
+        height: 345.6px;
+        width: 100%;
+    }
+}
+
+
 /* Ipad PRO  */
 
-@media (min-width: 1024px)and(max-width: 1025px) {
+@include tablet() {
+    .row {
+        padding: 20px;
+    }
+    .img-carousel {
+        height: 145.6px;
+        width: 100%;
+    }
+}
+
+@include tablet-landscape() {
     #logos {
         text-align: center;
     }
