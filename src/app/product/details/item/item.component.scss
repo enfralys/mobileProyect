@@ -1,5 +1,9 @@
 @import "../../../variables";
 @import "../../../mixins";
+.main {
+    background-color: #EDEDED;
+}
+
 .content {
     display: flex;
     flex-direction: row;
@@ -21,14 +25,6 @@
     background-position: 50%;
     border-radius: 40px;
     background-size: 100% auto;
-}
-
-.centrado {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .text {
@@ -62,6 +58,19 @@ p {
     background-color: #2196F3;
 }
 
+@include telefono() {
+    .main {
+        min-height: 100vh;
+    }
+    .centrado {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
 @include telefono-landscape() {
     .main {
         display: flex;
@@ -76,6 +85,13 @@ p {
         grid-template-columns: 25% 25% 25% 25%;
         //  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
     }
+    .centrado {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
     .contenedor {
         width: 100%;
     }
@@ -85,6 +101,22 @@ p {
     .image {
         width: 83%;
         height: 110px;
+    }
+}
+
+@include tablet() {
+    .contenedor {
+        padding: 0.75em;
+    }
+    .image {
+        width: 80%;
+        height: 97px;
+    }
+    .centrado {
+        width: auto;
+    }
+    .text {
+        margin-top: 70%;
     }
 }
 
@@ -101,6 +133,13 @@ p {
         // grid-gap: 12px;
         grid-template-columns: 25% 25% 25% 25%;
         //  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    }
+    .centrado {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .contenedor {
         width: 100%;

@@ -41,8 +41,8 @@ export class VideoComponent implements OnInit {
       let source: any = data;
       console.log(source.data)
       this.item = source.data;
-      this.duration = document.getElementById(source.data.path_data);
-      console.log(this.duration);
+      let a = this.item.filter(res => res.type ==="ftVideo")
+    this.item = a;
     });
   }
 

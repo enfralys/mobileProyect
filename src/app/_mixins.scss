@@ -1,13 +1,13 @@
 @import "variables.scss";
 // Media queries //
 @mixin telefono() {
-    @media only screen and (min-width: #{$telefono}) and (orientation: landscape) {
+    @media only screen and (min-width: #{$telefono}) {
         @content
     }
 }
 
 @mixin telefono-landscape() {
-    @media only screen and (max-height: #{$telefono}) and (orientation: landscape) {
+    @media only screen and (max-height: 360px) and (orientation: landscape) {
         @content
     }
 }
@@ -25,7 +25,7 @@
 }
 
 @mixin tablet() {
-    @media only screen and (min-width: #{$tablet}) {
+    @media only screen and (min-width: #{$tablet}) and (orientation: portrait) {
         @content
     }
 }

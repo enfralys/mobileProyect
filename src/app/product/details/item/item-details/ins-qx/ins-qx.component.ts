@@ -31,7 +31,7 @@ export class InsQxComponent implements OnInit {
       console.log(source.data)
       this.item = source.data;
      let a = this.item.filter(res => res.type == "insQx");
-      console.log(a)
+      this.item = a;
     });
   }
 }

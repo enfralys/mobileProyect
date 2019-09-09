@@ -14,6 +14,7 @@ export class TechnicalDataComponent implements OnInit {
   video: boolean = false;
   productId;
   obj = {};
+  items;
 
   constructor(
     private router: ActivatedRoute,
@@ -29,13 +30,17 @@ export class TechnicalDataComponent implements OnInit {
     this.productId = this.router.snapshot.paramMap.get('id');
     this.service.getproductitems(this.productId).subscribe(data => {
       let source: any = data;
-      source.data.forEach(data => {
+      console.log(source)
+      let a = source.data.filter(res => res.type == "ftPdf" ||  res.type == "ftVideo");
+         a.forEach(data => {
         if (data.type === "ftPdf") {
           this.pdf = true;
+          this.obj = true;
         }
         else if (data.type === "ftVideo")
         {
           this.video = true;
+          this.obj = true;
         }
         else
         {

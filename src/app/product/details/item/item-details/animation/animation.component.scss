@@ -1,6 +1,9 @@
+@import "../../../../../variables";
+@import "../../../../../mixins";
 .base {
     background-color: #fff;
     min-height: 93vh;
+    width: -webkit-fill-available;
 }
 
 .contenedor {
@@ -96,4 +99,24 @@ p {
 
 .alert.info {
     background-color: #2196F3;
+}
+
+@include telefono-landscape() {
+    p {
+        margin-top: 2%;
+    }
+    .main {
+        display: flex;
+        background-color: #fafafa;
+    }
+}
+
+@include tablet-landscape() {
+    p {
+        margin-top: 2%;
+    }
+    .main {
+        display: flex;
+        background-color: #fafafa;
+    }
 }

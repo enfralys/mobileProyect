@@ -28,6 +28,8 @@ export class PdfComponent implements OnInit {
       let source: any = data;
       console.log(source.data)
       this.item = source.data;
+      let a = this.item.filter(res => res.type === "ftPdf")
+      this.item = a
     });
   }
 

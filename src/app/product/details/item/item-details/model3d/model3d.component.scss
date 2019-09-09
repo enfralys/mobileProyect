@@ -1,6 +1,9 @@
+@import "../../../../../variables";
+@import "../../../../../mixins";
 .product-child {
     background-color: #fff;
     min-height: 93vh;
+    width: -webkit-fill-available;
 }
 
 .side-itemr {
@@ -34,4 +37,15 @@ p {
     margin-left: 7%;
     font-weight: 700;
     font-size: 28px;
+}
+
+@include tablet-landscape() {
+    p {
+        margin-top: 2%;
+    }
+    .main {
+        display: flex;
+        //background-color: #fafafa
+        width: 100%;
+    }
 }

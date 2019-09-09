@@ -14,10 +14,6 @@
     align-items: center;
 }
 
-.navbar-expand-lg .navbar-toggler {
-    display: unset !important;
-}
-
 .logos {
     width: 100%;
     height: 100%;
@@ -251,14 +247,33 @@ p {
 }
 
 
-/* Ipad PRO  */
+/* Mobile item */
 
-.navbar-expand-lg {
-    /* flex-flow: row nowrap; */
-    justify-content: space-between;
+@include telefono() {
+    .img-carousel {
+        height: 345.6px;
+        width: 100%;
+    }
 }
 
-@media (min-width: 1024px)and(max-width: 1025px) {
+
+/* Ipad PRO  */
+
+@include tablet() {
+    .row {
+        padding: 24px 20px 40px;
+    }
+    .img-carousel {
+        height: 175.6px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        border-radius: 20%;
+        background-size: 100% auto;
+    }
+}
+
+@include tablet-landscape() {
     #logos {
         text-align: center;
     }
@@ -268,5 +283,8 @@ p {
     .full {
         height: auto;
         width: 140%;
+    }
+    .img-carousel {
+        height: 235.6px;
     }
 }

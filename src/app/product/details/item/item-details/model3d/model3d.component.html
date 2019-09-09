@@ -1,11 +1,13 @@
-<app-sidebar></app-sidebar>
-<div class="product-child">
-    <div class="items-products">
-        <div class="side-itemr">
-            <p>AR</p>
-        </div>
-        <div class="side-itemr">
-            <p>VR</p>
+<div class="main">
+    <app-sidebar></app-sidebar>
+    <div class="product-child">
+        <div class="items-products">
+            <div class="side-itemr">
+                <p>AR</p>
+            </div>
+            <div class="side-itemr" (click)="test()">
+                <p>VR</p>
+            </div>
         </div>
     </div>
 </div>
