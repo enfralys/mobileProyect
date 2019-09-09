@@ -11,39 +11,50 @@ import { Route, Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   sliders: any[];
-  mobile: boolean;
+  mobile: number;
   slidersFormatted;
 
-  constructor(private service: SliderService, config: NgbCarouselConfig,private router:Router)
-  {
+  constructor(private service: SliderService, config: NgbCarouselConfig, private router: Router) {
     config.interval = 10000;
     config.wrap = false;
     config.keyboard = false;
     config.pauseOnHover = true;
-    this.loadData();
   }
 
   ngOnInit() {
     if (window.screen.width === 320) { // 768px portrait
-      this.mobile = true;
+      this.mobile = 1;
+      this.loadData();
+    } else if (window.screen.width <= 767) {
+      this.mobile = 1;
+      this.loadData();
     } else if (window.screen.width === 768) {
-      this.mobile = false;
+      this.mobile = 2;
+      this.loadData();
+    } else {
+      this.mobile = 3;
+      this.loadData();
     }
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    if (event.target.innerWidth === 320) { // 320px portrait
-      this.mobile = true;
+    if (event.target.innerWidth >= 320) { // 320px portrait
+      this.mobile = 1;
+      this.loadData();
     }
     if (event.target.innerWidth === 768) { // 768px portrait
-      this.mobile = false;
+      this.mobile = 2;
+      this.loadData();
+    }
+    if (event.target.innerWidth > 768) { // 768px portrait
+      this.mobile = 3;
+      this.loadData();
     }
     console.log(event.target.innerWidth)
   }
 
-  loadData()
-  {
+  loadData() {
     this.service.getSlider().subscribe(data => {
       let source: any = data;
       this.sliders = source.data;
@@ -52,15 +63,28 @@ export class HomeComponent implements OnInit {
       let j = -1;
 
       for (let i = 0; i < this.sliders.length; i++) {
-        if (i % 4 == 0) {
+        if (this.mobile === 2) {
+          if (i % 2 == 0) {
             j++;
             this.slidersFormatted[j] = [];
             this.slidersFormatted[j].push(this.sliders[i]);
-        }
-        else {
+          }
+          else {
             this.slidersFormatted[j].push(this.sliders[i]);
+          }
         }
-    }
+        else if (this.mobile === 3) {
+          if (i % 4 == 0) {
+            j++;
+            this.slidersFormatted[j] = [];
+            this.slidersFormatted[j].push(this.sliders[i]);
+          }
+          else {
+            this.slidersFormatted[j].push(this.sliders[i]);
+          }
+        }
+
+      }
     });
   }
   openNav() {
