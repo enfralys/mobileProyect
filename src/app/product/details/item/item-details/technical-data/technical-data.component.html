@@ -7,14 +7,12 @@
             </div>
         </div>
     </ng-container>
-    <ng-container *ngIf="obj != false">
-        <div class="items-products">
-            <div class="side-itemr" *ngIf="pdf" [routerLink]="['./pdf/', productId]">
-                <p>PDF</p>
-            </div>
-            <div class="side-itemr" *ngIf="video" [routerLink]="['./videos/', productId]">
-                <p>Videos Fílmicos</p>
-            </div>
+    <div class="items-products">
+        <div class="side-itemr" *ngIf="pdf" [routerLink]="['./pdf/', productId]">
+            <p>PDF</p>
         </div>
-    </ng-container>
+        <div class="side-itemr" *ngIf="video" [routerLink]="['./videos/', productId]">
+            <p>Videos Fílmicos</p>
+        </div>
+    </div>
 </div>

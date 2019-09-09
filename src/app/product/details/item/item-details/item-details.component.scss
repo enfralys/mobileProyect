@@ -50,15 +50,6 @@ p {
     }
 }
 
-@include tablet() {
-    p {
-        font-size: 45px;
-    }
-    .img-responsive {
-        width: 562.5px;
-    }
-}
-
 @include tablet-landscape() {
     .main {
         display: flex;
