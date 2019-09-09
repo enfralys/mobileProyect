@@ -65,6 +65,73 @@
     }
 }
 
+@include telefono-landscape() {
+    .side-itemr p {
+        margin-left: unset;
+        font-weight: 700;
+        font-size: 28px;
+        margin-top: 4%;
+        // background-color: #fafafa // background-color: #2D3942;
+        // background-repeat: no-repeat;
+        // background-position: 50%;
+        // border-radius: 80px;
+        //  background-size: 100% auto;
+        // padding: 4% 10%;
+    }
+    .side-itemr {
+        display: flex;
+        width: 100%;
+        color: #2D3942;
+        justify-content: center;
+        align-items: center;
+        border-color: #c3bdbd;
+        border-right-color: rgb(195, 189, 189);
+        border-left-color: rgb(195, 189, 189);
+        border-style: solid;
+        border-right-style: solid;
+        border-left-style: solid;
+        border-left: 0px;
+        border-left-width: 0px;
+        border-right: 0px;
+        border-right-width: 0px;
+        border-width: 1px;
+    }
+    .main {
+        display: flex;
+        background-color: #fafafa
+    }
+    .internauta {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding-top: 5%;
+        grid-row-gap: 10%;
+    }
+    .container {
+        padding-top: 10%;
+    }
+    .centrar {
+        display: flex;
+        /* height: 12%; */
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+    }
+    .img-responsive {
+        width: 80%;
+        height: 120.2833px;
+    }
+    .product-child {
+        background-color: #fff;
+        min-height: 93vh;
+        width: -webkit-fill-available;
+    }
+    p {
+        margin-left: 7%;
+        font-weight: 700;
+        font-size: 28px;
+    }
+}
+
 @include tablet-landscape() {
     .side-itemr p {
         margin-left: unset;
@@ -79,7 +146,22 @@
         // padding: 4% 10%;
     }
     .side-itemr {
-        background-color: #fafafa
+        display: flex;
+        width: 100%;
+        color: #2D3942;
+        justify-content: center;
+        align-items: center;
+        border-color: #c3bdbd;
+        border-right-color: rgb(195, 189, 189);
+        border-left-color: rgb(195, 189, 189);
+        border-style: solid;
+        border-right-style: solid;
+        border-left-style: solid;
+        border-left: 0px;
+        border-left-width: 0px;
+        border-right: 0px;
+        border-right-width: 0px;
+        border-width: 1px;
     }
     .main {
         display: flex;

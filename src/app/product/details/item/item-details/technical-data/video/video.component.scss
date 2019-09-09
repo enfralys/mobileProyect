@@ -99,6 +99,31 @@ p {
     }
 }
 
+@include telefono-landscape() {
+    p {
+        margin-top: 2%;
+    }
+    .main {
+        display: flex;
+        background-color: #fafafa
+    }
+    .container {
+        padding-top: 4%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: fit-content;
+        grid-gap: 12px;
+    }
+    .ico {
+        width: 23%;
+        height: 95px;
+    }
+    .side-itemp {
+        border-style: none;
+        background-color: transparent;
+    }
+}
+
 @include tablet-landscape() {
     p {
         margin-top: 2%;
