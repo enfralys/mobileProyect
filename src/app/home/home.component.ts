@@ -11,6 +11,7 @@ import { Route, Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   sliders: any[];
+  route: string;
   mobile: number;
   slidersFormatted;
 
@@ -35,6 +36,7 @@ export class HomeComponent implements OnInit {
       this.mobile = 3;
       this.loadData();
     }
+    this.route = this.router.url;
   }
 
   @HostListener('window:resize', ['$event'])
