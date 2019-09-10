@@ -111,6 +111,14 @@ p {
     }
 }
 
+@include tablet() {
+    .container-alert {
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 30px;
+    }
+}
+
 @include tablet-landscape() {
     p {
         margin-top: 2%;
@@ -118,5 +126,10 @@ p {
     .main {
         display: flex;
         background-color: #fafafa;
+    }
+    .container-alert {
+        padding-right: 30px;
+        padding-left: 30px;
+        font-size: 34px;
     }
 }

@@ -108,6 +108,11 @@ p {
     .contenedor {
         padding: 0.75em;
     }
+    .container-alert {
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 30px;
+    }
     .image {
         width: 80%;
         height: 97px;
@@ -134,6 +139,11 @@ p {
         grid-template-columns: 25% 25% 25% 25%;
         //  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
     }
+    .content-alert {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     .centrado {
         width: 100%;
         position: absolute;
@@ -144,6 +154,11 @@ p {
     .contenedor {
         width: 100%;
         padding: 22px 28px;
+    }
+    .container-alert {
+        padding-right: 30px;
+        padding-left: 30px;
+        font-size: 34px;
     }
     .text {
         margin-top: 40%;
