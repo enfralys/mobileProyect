@@ -4,6 +4,7 @@ RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY . /usr/src/app
+RUN npm cache clean --force
 RUN npm install && npm cache clean --force
 RUN npm run build --prod
 
