@@ -7,8 +7,8 @@
             </div>
         </div>
     </ng-container>
-    <div class="container">
-        <ng-container *ngIf="obj">
+    <div class="container" *ngIf="obj">
+        <ng-container>
             <ng-container *ngFor="let subcategory of subcategories">
                 <ng-container *ngIf="subcategory.status === 1">
                     <div class="product-child">

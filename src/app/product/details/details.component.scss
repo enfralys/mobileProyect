@@ -251,6 +251,11 @@ body {
         padding-left: 0;
         max-width: 900px;
     }
+    .container-alert {
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 30px;
+    }
     .side-itemr {
         padding-top: 2%;
     }
@@ -267,6 +272,11 @@ body {
         grid-gap: 10px;
         height: fit-content;
         padding-top: 8%;
+    }
+    .container-alert {
+        padding-right: 30px;
+        padding-left: 30px;
+        font-size: 34px;
     }
     .side-itemr {
         align-items: unset;
